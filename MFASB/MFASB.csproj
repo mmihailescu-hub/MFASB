@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2C9B14C-CF8F-45C0-A1E8-C9A1D6DDC369}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MFASB</RootNamespace>
+    <AssemblyName>MFASB</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationActivity.Designer.cs">
+      <DependentUpon>ApplicationActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Algorithms.cs" />
+    <Compile Include="Classes\Audit.cs" />
+    <Compile Include="Classes\Biometrics.cs" />
+    <Compile Include="Classes\CustomizeControls.cs" />
+    <Compile Include="Classes\Database.cs" />
+    <Compile Include="Classes\Hashing.cs" />
+    <Compile Include="Classes\MillerRabinAlgorithm.cs" />
+    <Compile Include="Classes\ParsingNumbers.cs" />
+    <Compile Include="Classes\RSAAlgorithm.cs" />
+    <Compile Include="Classes\Users.cs" />
+    <Compile Include="CommandShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommandShell.Designer.cs">
+      <DependentUpon>CommandShell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keys.Designer.cs">
+      <DependentUpon>Keys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MFASBSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MFASBSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SieveOfEratosthenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SieveOfEratosthenes.Designer.cs">
+      <DependentUpon>SieveOfEratosthenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratePrimeNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratePrimeNumbers.Designer.cs">
+      <DependentUpon>GeneratePrimeNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA.Designer.cs">
+      <DependentUpon>RSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersManagement\AddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersManagement\AddNewUser.Designer.cs">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersManagement\ViewUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersManagement\ViewUsers.Designer.cs">
+      <DependentUpon>ViewUsers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationActivity.resx">
+      <DependentUpon>ApplicationActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandShell.resx">
+      <DependentUpon>CommandShell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keys.resx">
+      <DependentUpon>Keys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SieveOfEratosthenes.resx">
+      <DependentUpon>SieveOfEratosthenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratePrimeNumbers.resx">
+      <DependentUpon>GeneratePrimeNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RSA.resx">
+      <DependentUpon>RSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersManagement\AddNewUser.resx">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersManagement\ViewUsers.resx">
+      <DependentUpon>ViewUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MFASBSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MFASBSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagini\about_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagini\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagini\mobile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagini\access.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagini\database.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
